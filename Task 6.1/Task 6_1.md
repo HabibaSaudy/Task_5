@@ -61,7 +61,7 @@ Wire.write(0x00);                                // set the full-scale range to 
 Wire.endTransmission();                         // end the transmission
 ```
 
-![1.PNG](Task%206%201%208ac0093462fa45b8b00d5d2f6be61feb/1.png)
+![1.PNG](/Images/Full_Scale_Range.png)
 
 - Call the function MPU_Calibration to do the calibration to avoid errors
 
@@ -124,7 +124,7 @@ void loop() {
 
 - To get the correct value of our data we subtract the offset value stored in(gyro_Offset_z) from the variable that store the data read from the sensor (gyro_z) and then we divide the output by 131 which is the sensitivity of the gyroscope for full-scale range we choose (+-250) according to the sensor datasheet
 
-![2.PNG](Task%206%201%208ac0093462fa45b8b00d5d2f6be61feb/2.png)
+![2.PNG](/Images/Sensetivity.png)
 
 - We calculate the yaw angle using the following equation :
 
@@ -154,4 +154,4 @@ If the Sensor is surrounded by a noisy environment, what type of filter could us
 - Complementary filters and Kalman filters are commonly used for orientation estimation in IMU applications, but my choice would be complementary filter as Kalman filter would be more complex and our project needs  a straightforward and computationally efficient solution for estimating yaw angle with reasonable accuracy.
 - According to the sensor datasheet, the cutoff frequency depend on the configuration we choose to write to the register DLPF_CFG and then the cutoff frequency will be equal to the bandwidth, for example if we write to the register 0x10 then the cutoff frequency = 98 HZ and the sampling frequency = 1 KHZ
 
-![sensor sheet.PNG](Task%206%201%208ac0093462fa45b8b00d5d2f6be61feb/sensor_sheet.png)
+![sensor sheet.PNG](/Images/Filter_Data_Sheet.png)
