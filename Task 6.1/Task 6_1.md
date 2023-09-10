@@ -155,4 +155,3 @@ If the Sensor is surrounded by a noisy environment, what type of filter could us
 - According to the sensor datasheet, the cutoff frequency depend on the configuration we choose to write to the register DLPF_CFG and then the cutoff frequency will be equal to the bandwidth, for example if we write to the register 0x10 then the cutoff frequency = 98 HZ and the sampling frequency = 1 KHZ
 
 ![sensor sheet.PNG](Task%206%201%208ac0093462fa45b8b00d5d2f6be61feb/sensor_sheet.png)
--------> There is aproblem with images they won't appear on GitHub so i added them in a file called images and will try to fix the problem
